@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --header-font-family: "";
+    --header-font-size: 4.2rem;
+    --primary-text-font-family: monospace;
+    --primary-text-color: #ebd9b7;
+    --primary-text-font-size: 1rem;
+}
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: var(--primary-text-font-family);
+    font-size: var(--primary-text-font-size);
+    color: var(--primary-text-color);
+}
+
+body {
+    background-image: url('../assets/bg-tile.png');
+    background-repeat: repeat;
+}
+
+/* body */
+.container {
+    /* spacing */
+    margin-block-start: 3rem;
+    max-inline-size: 75vw;
+    block-size: 100vh;
+    padding: 1.25em;
+    margin-inline: auto;
+ 
+    /* display properties */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+.header {
+
+    /* margin-block-end: 1.67em; */
+}
+
+.header #name {
+    font-size: var(--header-font-size);
+    font-style: italic;
+}
+.header #quote {
+    font-size: 1.3rem;
+}
+
+/* horizontal ruler */
+hr {
+    margin-block: 1.64em;
+}
