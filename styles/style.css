@@ -1,11 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
+    /* textual elements */
     --header-font-family: "";
-    --header-font-size: 4.2rem;
-    --primary-text-font-family: monospace;
+    --header-font-size: 5.2rem;
+
+    --header-quote-font-family: "Libre Baskerville", serif;
+    --header-quote-font-size: 1.45rem;
+    --header-quote-font-weight: 650;
+    --header-quote-font-style: italic;
+
+
+    --primary-text-font-family: "Space Mono", monospace;
     --primary-text-color: #ebd9b7;
-    --primary-text-font-size: 1rem;
+    --primary-text-font-size: 1.1rem;
+    
+    /* spacing */
+    --primary-padding: 1.25em;
+    --primary-container-width: 75vw;
+    --primary-container-height: 100vh;
+    --header-margin-end: 1.67rem;
+
+    /* misc */
 }
 
 
@@ -22,17 +38,17 @@
 }
 
 body {
-    background-image: url('../assets/bg-tile.png');
+    background-image: url('/assets/bg-tile.png');
     background-repeat: repeat;
 }
 
 /* body */
 .container {
     /* spacing */
-    margin-block-start: 3rem;
-    max-inline-size: 75vw;
-    block-size: 100vh;
-    padding: 1.25em;
+    margin-block-start: 1rem;
+    max-inline-size: var(--primary-container-width);
+    block-size: var(--primary-container-height);
+    padding: var(--primary-padding);
     margin-inline: auto;
  
     /* display properties */
@@ -42,19 +58,62 @@ body {
 
 /* Header Styling */
 .header {
-
-    /* margin-block-end: 1.67em; */
+    margin-block-end: var(--header-margin-end);
 }
 
-.header #name {
+#name {
     font-size: var(--header-font-size);
     font-style: italic;
 }
-.header #quote {
-    font-size: 1.3rem;
+#quote {
+    font-family: var(--header-quote-font-family);
+    font-size: var(--header-quote-font-size);
+    font-style: var(--header-quote-font-style);
+    font-weight: var(--header-quote-font-weight);
+}
+
+.navbar { 
+    margin-block-start: 1.5rem;    
+}
+
+.nav-link {
+    display: inline-block;
+    margin-inline-end: 1.2rem;
+    text-decoration-style: none;
+}
+
+/* paragraph spacing */
+p {
+    margin-block-end: 1.15rem;
 }
 
 /* horizontal ruler */
 hr {
-    margin-block: 1.64em;
+    margin-block-end: 1.43em;
+}
+
+/* here onwards starts the blog page and post style*/
+.post-links {
+    margin-inline-start: 1.23rem;
+    list-style-type: none;
+}
+
+.post-link {
+    margin-block-end: 1.25rem;
+    font-weight: 700;
+}
+
+.post-link:link {
+    text-decoration: none;
+}
+
+.post-header {
+    margin-block-end: 1.75rem;
+}
+.post-title {
+    font-size: 2.25rem;
+}
+
+.post-upload-date {
+    font-size: 1.25rem;
 }
